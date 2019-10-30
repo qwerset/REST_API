@@ -1,0 +1,27 @@
+﻿@using REST_API.Data.Models
+@model IEnumerable<Books>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>List</title>
+</head>
+<body>
+    <h2>Все книги:</h2>
+    @{
+        foreach (var book in Model)
+        {
+            <div>
+                <h2>Модель: @book.name</h2>
+                <h2>Автор: @book.autor</h2>
+                <h2>Статуы: @book.stat</h2>
+            </div>
+        }
+    }
+</body>
+</html>
